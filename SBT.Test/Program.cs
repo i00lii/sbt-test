@@ -5,6 +5,8 @@ using RST.Command.Commands;
 using RST.Command.Units;
 using SBT.External.Commands;
 using SBT.External.Units;
+using RST.Command.Extensions;
+using System.Linq;
 
 namespace SBT.Test
 {
@@ -37,7 +39,8 @@ namespace SBT.Test
 		static void Main(string[] args)
 		{
 			// Команды для юнитов
-			var commands = new List<ICommand> { new FireCommand(), new MoveCommand(), new RotateCommand() };
+			var commands = EnumerateCommands();
+
 			// Юниты
 			var units = new List<IUnit> { new Car(), new Tank(), new Fence(), new Helicopter() };
 
@@ -49,6 +52,13 @@ namespace SBT.Test
 					command.Execute(unit);
 				}
 			}
+		}
+
+		private static IEnumerable<IExecutable> EnumerateCommands()
+		{
+			yield return new FireCommand().AsExecutable();
+			yield return new MoveCommand().AsExecutable();
+			yield return new RotateCommand().AsExecutable();
 		}
 	}
 }

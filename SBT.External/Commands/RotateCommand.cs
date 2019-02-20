@@ -2,5 +2,5 @@
 
 namespace SBT.External.Commands
 {
-	public class RotateCommand : Command<RotateCommand> { }
+	public class RotateCommand : ICommand { }
 }
