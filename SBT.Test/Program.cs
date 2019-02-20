@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using RST.Command;
+using RST.Command.Commands;
+using RST.Command.Units;
 
 namespace SBT.Test
 {
