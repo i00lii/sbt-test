@@ -1,4 +1,4 @@
 ﻿namespace RST.Command.Commands
 {
-	public class MoveCommand : ICommand { }
+	public class MoveCommand : Command<MoveCommand> { }
 }

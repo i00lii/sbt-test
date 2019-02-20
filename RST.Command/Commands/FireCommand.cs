@@ -1,4 +1,4 @@
 ﻿namespace RST.Command.Commands
 {
-	public class FireCommand : ICommand { }
+	public class FireCommand : Command<FireCommand> { }
 }
