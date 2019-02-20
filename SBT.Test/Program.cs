@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using RST.Command;
+﻿using RST.Command;
 using RST.Command.Commands;
+using RST.Command.Extensions;
 using RST.Command.Units;
 using SBT.External.Commands;
 using SBT.External.Units;
-using RST.Command.Extensions;
-using System.Linq;
+using System.Collections.Generic;
 
 namespace SBT.Test
 {
-	class Program
+	internal class Program
 	{
 		// Представьте себе некое игровое поле, на котором могут располагаться игровые юниты разных типов: автомобиль(Car), танк(Tank) и забор(Fence).
 		// Танк должен уметь двигаться(MoveCommand) и стрелять(FireCommand), машина может только двигаться(MoveCommand), а забор вообще ничего не может делать.
@@ -36,7 +34,7 @@ namespace SBT.Test
 		//  2) Использовать DI контейнеры запрещено.
 		//  3) Код избранного для реализации варианта("Вариант 1" и "Вариант 2") должен оставаться неизменным.
 
-		static void Main(string[] args)
+		private static void Main(string[] args)
 		{
 			// Команды для юнитов
 			var commands = EnumerateCommands();
