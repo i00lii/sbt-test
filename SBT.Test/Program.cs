@@ -39,23 +39,14 @@ namespace SBT.Test
 			// Юниты
 			var units = new List<IUnit> { new Car(), new Tank(), new Fence() };
 
-			// //Вариант 1: для каждой команды вызвать её исполнение на каждом юните.
-			//foreach (var command in commands)
-			//{
-			//    foreach (var unit in units)
-			//    {
-			//        command.Execute(unit)
-			//    }
-			//}
-
-			//Вариант 2: для каждого юнита вызвать исполнение команды на нём.
-			//foreach (var unit in units)
-			//{
-			//    foreach (var command in commands)
-			//    {
-			//        unit.ExecuteCommand(command);
-			//    }
-			//}
+			//Вариант 1: для каждой команды вызвать её исполнение на каждом юните.
+			foreach (var command in commands)
+			{
+				foreach (var unit in units)
+				{
+					command.Execute(unit);
+				}
+			}
 		}
 	}
 }
