@@ -4,6 +4,9 @@ namespace RST.Command
 {
 	public static class UnitExtensions
 	{
+		/// <summary>
+		/// Реализация действия "по умолчанию" для демонстрации вызова соответствующей команды на определенном игровом юните.
+		/// </summary>
 		public static void ApplyDefault<TUnit, TCommand>(this TUnit unit, TCommand command)
 			where TUnit : IUnit
 			where TCommand : ICommand

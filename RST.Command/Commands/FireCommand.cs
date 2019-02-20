@@ -1,4 +1,9 @@
 ﻿namespace RST.Command.Commands
 {
-	public class FireCommand : ICommand { }
+	/// <summary>
+	/// Команда "Огонь". Применима ко всем игровым юнитам, реализующим интерфейс <see cref="ICommandTarget{FireCommand}"/>.
+	/// </summary>
+	public class FireCommand : ICommand
+	{
+	}
 }

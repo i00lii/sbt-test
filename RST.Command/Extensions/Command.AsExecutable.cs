@@ -2,6 +2,9 @@
 {
 	public static class CommandExtensions
 	{
+		/// <summary>
+		/// Создает обертку над командой, позволяющую применить соответствующую <see cref="ICommand"/> к какому-либо игровому юниту.
+		/// </summary>
 		public static IExecutable AsExecutable<TCommand>(this TCommand command)
 			where TCommand : ICommand
 			=> new Executable<TCommand>(command);
